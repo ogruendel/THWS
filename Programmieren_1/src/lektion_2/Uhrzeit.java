@@ -5,9 +5,9 @@ import java.time.LocalTime;
 public class Uhrzeit {
     public static void main(String[] args) {
 
-        int SECONDS_PER_DAY = 86400;
-        int SECONDS_PER_HOUR = 3600;
-        int SECONDS_PER_MINUTE = 60;
+        final int SECONDS_PER_DAY = 86400;
+        final int SECONDS_PER_HOUR = 3600;
+        final int SECONDS_PER_MINUTE = 60;
 
         int hour = LocalTime.now().getHour();
         int minute = LocalTime.now().getMinute();
