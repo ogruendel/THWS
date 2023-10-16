@@ -1,4 +1,4 @@
-package lektion_2;
+package chapter2;
 
 public class PQFormula {
     public static void main(String[] args) {

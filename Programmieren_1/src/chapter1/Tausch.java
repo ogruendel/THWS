@@ -1,4 +1,4 @@
-package lektion_1;
+package chapter1;
 
 public class Tausch {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lektion_2;
+package chapter2;
 
 import java.time.LocalTime;
 
