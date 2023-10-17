@@ -16,8 +16,11 @@ public class Pizza {
         System.out.println("Preis Pizza 2 in Euro:");
         float p2 = scanner.nextFloat();
 
-        float sizePerPrice1 = d1 / p1;
-        float sizePerPrice2 = d2 / p2;
+        double a1 = Math.PI * 0.5 * d1 * 0.5 * d1;
+        double a2 = Math.PI * 0.5 * d2 * 0.5 * d2;
+
+        double sizePerPrice1 = a1 / p1;
+        double sizePerPrice2 = a2 / p2;
 
         if (sizePerPrice1 > sizePerPrice2) {
             System.out.println("Die Pizza mit dem Durchmesser von " + d1 + "cm hat ein besseres Größen-/Preisverhältnis");
