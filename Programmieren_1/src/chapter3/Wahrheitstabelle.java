@@ -31,5 +31,6 @@ public class Wahrheitstabelle {
             // System.out.println("char 1 ist nicht t oder f");
             throw new RuntimeException("char 1 ist nicht t oder f");
         }
+        scanner.close();
     }
 }
