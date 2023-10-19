@@ -10,6 +10,8 @@ public class Einzelzeichen {
         System.out.println("Character eingeben:");
         char c = scanner.nextLine().charAt(0);
 
+        // indexOf() offiziell nicht erlaubt
+
         final String GROSS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         final String HEX = "0123456789ABCDEFabcdef";
         final String BIN = "01";
