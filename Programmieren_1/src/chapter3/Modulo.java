@@ -19,5 +19,6 @@ public class Modulo {
         /* Man kann den Modulo ohne Probleme auf negative und Kommazahlen anwenden.
         *  Das Ergebnis gibt immer noch den Rest einer Division aus und ist damit sinnvoll.
          */
+        scanner.close();
     }
 }
