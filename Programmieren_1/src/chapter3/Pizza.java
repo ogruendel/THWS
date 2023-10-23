@@ -27,5 +27,6 @@ public class Pizza {
         } else {
             System.out.println("Die Pizza mit dem Durchmesser von " + d2 + "cm hat ein besseres Größen-/Preisverhältnis");
         }
+        scanner.close();
     }
 }
