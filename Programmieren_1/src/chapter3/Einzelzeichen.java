@@ -25,5 +25,6 @@ public class Einzelzeichen {
         if (!((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'f') || ((c >= '0' && c <= '9')))) {
             System.out.println("Unbekannt");
         }
+        scanner.close();
     }
 }
