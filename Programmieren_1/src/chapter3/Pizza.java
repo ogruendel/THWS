@@ -22,7 +22,9 @@ public class Pizza {
         double sizePerPrice1 = a1 / p1;
         double sizePerPrice2 = a2 / p2;
 
-        if (sizePerPrice1 > sizePerPrice2) {
+        if (sizePerPrice1 == sizePerPrice2) {
+            System.out.println("Beide Pizzen haben das selbe Größen-/Preisverhältnis");
+        } else if (sizePerPrice1 > sizePerPrice2) {
             System.out.println("Die Pizza mit dem Durchmesser von " + d1 + "cm hat ein besseres Größen-/Preisverhältnis");
         } else {
             System.out.println("Die Pizza mit dem Durchmesser von " + d2 + "cm hat ein besseres Größen-/Preisverhältnis");
