@@ -24,5 +24,7 @@ public class Querprodukt {
             }
         }
         System.out.println("Querprodukt: " + querProdukt);
+
+        scanner.close();
     }
 }
