@@ -19,8 +19,8 @@ public class FreierFall {
         }*/
 
         for (int t = 1; t <= tMax; t = t + 5) {
-                double s = 0.5 * G * t * t;
-                System.out.println(t + "s: " + df.format(s) + "m");
+            double s = 0.5 * G * t * t;
+            System.out.println(t + "s: " + df.format(s) + "m");
         }
 
         scanner.close();
