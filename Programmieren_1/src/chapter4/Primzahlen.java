@@ -35,11 +35,11 @@ public class Primzahlen {
                 }
             }
             if (prime) {
-                    System.out.println(newNum + " ist eine Primzahl");
-                } else {
-                    System.out.println(newNum + " ist keine Primzahl");
-                }
-                prime = true;
+                System.out.println(newNum + " ist eine Primzahl");
+            } else {
+                System.out.println(newNum + " ist keine Primzahl");
+            }
+            prime = true;
         }
 
         scanner.close();
