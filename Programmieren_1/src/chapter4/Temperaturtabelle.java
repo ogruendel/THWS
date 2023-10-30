@@ -7,10 +7,10 @@ public class Temperaturtabelle {
         int max = 300;
         DecimalFormat df = new DecimalFormat("0.00");
 
-        System.out.println("Fahrenheit       Celsius");
+        System.out.println("Fahrenheit\tCelsius");
         for (int fahrenheit = 0; fahrenheit <= max; fahrenheit++) {
             double celsius = (5.0/9.0) * (fahrenheit - 32);
-            System.out.println(fahrenheit + "               " + df.format(celsius));
+            System.out.println(fahrenheit + "\t\t\t" + df.format(celsius));
         }
     }
 }
