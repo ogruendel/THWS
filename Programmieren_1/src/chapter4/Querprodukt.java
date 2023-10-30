@@ -9,7 +9,6 @@ public class Querprodukt {
         boolean validNum = false;
         int querProdukt = 1;
 
-
         while (!validNum) {
             System.out.println("Geben Sie bitte eine Zahl ein:");
             int num = scanner.nextInt();
