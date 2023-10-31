@@ -25,5 +25,7 @@ public class Potenz {
             power = 1 / power;
         }
         System.out.println(power);
+
+        scanner.close();
     }
 }
