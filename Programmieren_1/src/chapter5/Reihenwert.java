@@ -2,7 +2,7 @@ package chapter5;
 
 public class Reihenwert {
     public static void main(String[] args) {
-        final double cutoff = 1E-5;
+        final double CUTOFF = 1E-5;
         double deltaSum;
         double prev = 0;
 
@@ -17,7 +17,7 @@ public class Reihenwert {
 
             System.out.println(6 * sum);
             k++;
-        } while (deltaSum >= cutoff);
+        } while (deltaSum >= CUTOFF);
     }
 
     /*
