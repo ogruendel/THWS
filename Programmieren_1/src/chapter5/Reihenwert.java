@@ -23,6 +23,7 @@ public class Reihenwert {
     /*
     zu c:
           Wenn der Faktor 6 mit in der Summe steht, dann wird jeder einzelne Term 1 / k² versechsfacht.
-          Steht der Faktor 6 vor der Summe, wird nur das Endergebnis versechsfacht.
+          Steht der Faktor 6 vor der Summe, wird das Endergebnis versechsfacht.
+            => Es macht keinen Unterschied, da man die sechs ausklammern kann.
      */
 }
