@@ -11,17 +11,13 @@ public class Potenz {
         System.out.println("Bitte geben sie n (int) ein:");
         int n = scanner.nextInt();
         double power = 1;
+        int absN = n < 0 ? -1 * n : n;
 
-        if (n > 0) {
-            do {
-                power *= b;
-                n--;
-            } while (n > 0);
-        } else if (n < 0) {
-            do {
-                power *= b;
-                n++;
-            } while (n < 0);
+        for (int i = 0; i < absN; i++) {
+            power *= b;
+        }
+
+        if (n < 0) {
             power = 1 / power;
         }
         System.out.println(power);
