@@ -26,6 +26,8 @@ public class Statistics {
         System.out.println("Maximalwert:\t\t\t" + max(input));
         System.out.println("Minimalwert:\t\t\t" + min(input));
 
+        scanner.close();
+
     }
 
     /**
