@@ -31,5 +31,17 @@ public class Main {
         System.out.println(bestePizza.name);
         System.out.println(bestePizza.durchmesser[0] + "cm");
         System.out.println(bestePizza.preis[0] + "€");
+
+        // Aufgabe 3
+        Raum i215 = new Raum("I.2.15", 32, false);
+        Raum i21 = new Raum("I.2.1", 40, false);
+
+        System.out.println();
+        System.out.println(i215.belegt);
+        System.out.println(i21.belegt);
+        i21.setBelegt(true);
+        System.out.println();
+        System.out.println(i215.belegt);
+        System.out.println(i21.belegt);
     }
 }
