@@ -8,7 +8,7 @@
             (linker-index-iter ziffer (remainder zahl (expt 10 (- laenge 1))) (- laenge 1) (+ r 1))))
     )
 
-  (linker-index-iter ziffer zahl (laenge zahl 0) 1)
+  (linker-index-iter (abs ziffer) (abs zahl) (laenge zahl 0) 1)
   )
 
 (define (laenge zahl l)
