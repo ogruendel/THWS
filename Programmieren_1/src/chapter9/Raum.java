@@ -3,11 +3,7 @@ package chapter9;
 public class Raum {
     private final String name;
     private final int plaetze;
-<<<<<<< HEAD
     private boolean belegt;
-=======
-    boolean belegt;
->>>>>>> origin/master
 
     public Raum(String name, int plaetze, boolean belegt) {
         this.name = name;
