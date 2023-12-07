@@ -37,11 +37,11 @@ public class Main {
         Raum i21 = new Raum("I.2.1", 40, false);
 
         System.out.println();
-        System.out.println(i215.belegt);
-        System.out.println(i21.belegt);
+        System.out.println(i215.getBelegt());
+        System.out.println(i21.getBelegt());
         i21.setBelegt(true);
         System.out.println();
-        System.out.println(i215.belegt);
-        System.out.println(i21.belegt);
+        System.out.println(i215.getBelegt());
+        System.out.println(i21.getBelegt());
     }
 }
