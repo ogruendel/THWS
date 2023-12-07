@@ -17,7 +17,7 @@ public class Main {
 
         Pizza[] pizzen = new Pizza[]{margherita, salami, hawaii, calzone, formaggi};
 
-        Pizza bestePizza = new Pizza("", new int[]{1}, new float[]{99999f});
+        Pizza bestePizza = pizzen[0];
         for (int i = 0; i < pizzen.length; i++) {
             for (int j = 0; j < pizzen[i].durchmesser.length; j++) {
                 if (pizzen[i].preisLeistung(pizzen[i].durchmesser[j], pizzen[i].preis[j]) > bestePizza.preisLeistung(bestePizza.durchmesser[0], bestePizza.preis[0])) {

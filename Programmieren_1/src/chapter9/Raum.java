@@ -1,8 +1,8 @@
 package chapter9;
 
 public class Raum {
-    String name;
-    int plaetze;
+    private final String name;
+    private final int plaetze;
     boolean belegt;
 
     public Raum(String name, int plaetze, boolean belegt) {
@@ -13,5 +13,13 @@ public class Raum {
 
     public void setBelegt(boolean belegt) {
         this.belegt = belegt;
+    }
+
+    public int getPlaetze() {
+        return plaetze;
+    }
+
+    public String getName() {
+        return name;
     }
 }
