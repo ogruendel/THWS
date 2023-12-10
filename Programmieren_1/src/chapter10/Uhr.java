@@ -50,6 +50,16 @@ public class Uhr {
     }
 
     public void naechsteSekunde() {
-        this.sekunde++;
+        if (this.sekunde == 59) {
+            if (this.minute == 59) {
+                if (this.stunde == 23) {
+                    this.stunde = 0;
+                }
+                this.minute = 0;
+            }
+            this.sekunde = 0;
+        } else {
+            this.sekunde++;
+        }
     }
 }
