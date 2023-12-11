@@ -1,0 +1,17 @@
+#lang racket
+(define (expandiere sym-liste)
+  (define (expandiere-iter sym-liste anzahl symbol)
+    (if (empty? sym-liste)
+        '()
+        (if (= anzahl 1)
+            (if (number? (car sym-liste))
+                (expandiere-iter (cdr sym-liste) (car sym-liste) (cadr sym-liste))
+                (cons (car sym-liste) (expandiere-iter (cdr sym-liste) 1 symbol))
+                )
+            (cons symbol (expandiere-iter sym-liste (- anzahl 1) symbol))
+            )
+        )
+    )
+
+  (expandiere-iter sym-liste 1 '())
+  )
