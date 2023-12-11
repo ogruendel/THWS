@@ -1,0 +1,13 @@
+#lang racket
+(define (liste-teilen eingabe)
+  (define (liste-teilen-iter eingabe links rechts)
+    (if (empty? eingabe)
+        (list links rechts)
+        (if (= (length eingabe) 1)
+            (liste-teilen-iter (cdr eingabe) (append links (list (car eingabe))) rechts)
+            (liste-teilen-iter (cddr eingabe) (append links (list (car eingabe))) (append rechts (list (cadr eingabe))))
+            )
+        )
+    )
+  (liste-teilen-iter eingabe '() '())
+  )
