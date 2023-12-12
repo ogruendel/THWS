@@ -11,5 +11,10 @@ public class Main {
             wetter.rotateNachricht(1);
             System.out.println(wetter.getNachricht());
         }
+
+        // Raumbelegung
+        Raum raum = new Raum("H.1.1", 10, 10, false, 7);
+        raum.betreteRaum(new Student("Test", 12345));
+        System.out.println(raum.createCurrentRoomPlan(true));
     }
 }
