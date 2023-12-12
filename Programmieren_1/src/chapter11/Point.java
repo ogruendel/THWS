@@ -1,4 +1,4 @@
-package chatper11;
+package chapter11;
 
 public class Point {
     private final int x;

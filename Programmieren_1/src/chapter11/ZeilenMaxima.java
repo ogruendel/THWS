@@ -1,4 +1,4 @@
-package chatper11;
+package chapter11;
 
 public class ZeilenMaxima {
     public static double[] zeilenMaxima(double[][] input) {

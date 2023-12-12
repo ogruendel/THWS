@@ -1,4 +1,4 @@
-package chatper11;
+package chapter11;
 
 public class Betrag {
     public static int abs(int x) {

@@ -1,4 +1,4 @@
-package chatper11;
+package chapter11;
 
 public class RoomTest {
     public static void main(String[] args) {
