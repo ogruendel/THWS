@@ -1,0 +1,13 @@
+#lang racket
+(define (sortieren liste praedikat)
+  (define (sortieren-iter liste praedikat t f)
+    (if (empty? liste)
+      (append t f)
+      (if (praedikat (car liste))
+        (sortieren-iter (cdr liste) praedikat (append t (cons (car liste) '())) f)
+        (sortieren-iter (cdr liste) praedikat t (append f (cons (car liste) '())))
+        )
+      )
+    )
+  (sortieren-iter liste praedikat '() '())
+  )
