@@ -1,0 +1,13 @@
+#lang racket
+(define (sicheresPasswort passwort)
+  (define (sicheresPasswortIter passwort i lower upper sym)
+    (if (empty? passwort)
+      (and (>= i 8) (> lower 0) (> upper 0) (>= sym 2))
+      (cond ((char-upper-case? (car passwort)) (sicheresPasswortIter (cdr passwort) (+ i 1) lower (+ upper 1) sym))
+            ((char-lower-case? (car passwort)) (sicheresPasswortIter (cdr passwort) (+ i 1) (+ lower 1) upper sym))
+            (else (sicheresPasswortIter (cdr passwort) (+ i 1) lower upper (+ sym 1)))
+            )
+      )
+    )
+  (sicheresPasswortIter (string->list passwort) 0 0 0 0)
+  )
