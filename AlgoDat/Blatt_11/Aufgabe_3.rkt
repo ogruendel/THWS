@@ -1,0 +1,13 @@
+#lang racket
+(define (alle-kleineren grenze liste)
+    (if (empty? liste)
+      '()
+      (if (list? liste)
+        (append (alle-kleineren grenze (car liste)) (alle-kleineren grenze (cdr liste)))
+        (if (< liste grenze)
+          (list liste)
+          '()
+          )
+        )
+      )
+  )
