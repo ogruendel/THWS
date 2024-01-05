@@ -1,7 +1,10 @@
 package chapter12;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        // Doubly linked list
         DoublyLinkedList list = new DoublyLinkedList();
 
         NodePerson person1 = new NodePerson(41, "Smith");
@@ -29,5 +32,48 @@ public class Main {
             System.out.println(pointer.getName());
             pointer = pointer.getPrev();
         }
+
+        // Binary Tree
+        BinaryTree dictionary = new BinaryTree();
+        Scanner scanner = new Scanner(System.in);
+
+        boolean running = true;
+
+        while (running) {
+            System.out.println("Menü:\n(1) Einfügen\n(2) Suche\n(3) Löschen\n(4) Exit");
+
+            int menu = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (menu) {
+                case 1 -> {
+                    System.out.println("Wort zum einfügen: ");
+                    String word = scanner.nextLine();
+                    System.out.println("Bedeutung des Wortes: ");
+                    String description = scanner.nextLine();
+                    dictionary.insert(new DictionaryNode(word, description));
+                    dictionary.print();
+                }
+                case 2 -> {
+                    System.out.println("Wort zum suchen: ");
+                    String word = scanner.nextLine();
+                    System.out.println(dictionary.search(word));
+                }
+                case 3 -> {
+                    System.out.println("Wort zum löschen: ");
+                    String word = scanner.nextLine();
+                    dictionary.delete(dictionary.searchNode(word));
+                    dictionary.print();
+                }
+                case 4 -> {
+                    running = false;
+                }
+                default -> {
+                    System.out.println("Falsche Eingabe.");
+                }
+            }
+        }
+
+        scanner.close();
     }
 }
