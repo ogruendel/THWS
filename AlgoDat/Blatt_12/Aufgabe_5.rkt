@@ -1,0 +1,22 @@
+#lang racket
+(define (bubble-sort vec comparator)
+  (define (iter max-iter)
+    (define (bubble-swap index)
+      (cond ((= index (- max-iter 1)) true)
+            ((comparator (vector-ref vec index) (vector-ref vec (+ index 1)))
+             (vector-swap vec index) (bubble-swap (+ index 1)))
+            (else (bubble-swap (+ index 1))))
+      )
+    (cond ((= max-iter 1) vec)
+          (else (bubble-swap 0) (iter (- max-iter 1))))
+    )
+
+  (define (vector-swap vec index)
+    (let ((temp (vector-ref vec index)))
+      (vector-set! vec index (vector-ref vec (+ index 1)))
+      (vector-set! vec (+ index 1) temp)
+      )
+    vec
+    )
+  (iter (vector-length vec))
+  )
