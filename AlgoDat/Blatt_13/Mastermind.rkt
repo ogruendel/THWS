@@ -1,4 +1,5 @@
 #lang racket
+(require racket/trace)
 
 (define (zaehleSchwarz code guess)
   (if (empty? code)
@@ -34,4 +35,23 @@
 
 (define (bewerte code guess)
     (cons (- (minSumme code guess) (zaehleSchwarz code guess)) (zaehleSchwarz code guess))
+  )
+
+(define (alleKombinationen)
+    (define (alleKombinationen-iter i j k l maximum result)
+    (if (> i maximum)
+      result
+      (if (> j maximum)
+        (alleKombinationen-iter (+ i 1) 0 k l maximum result)
+        (if (> k maximum)
+          (alleKombinationen-iter i (+ j 1) 0 l maximum result)
+          (if (> l maximum)
+            (alleKombinationen-iter i j (+ k 1) 0 maximum result)
+            (alleKombinationen-iter i j k (+ l 1) maximum (append result (list (list i j k l))))
+            )
+          )
+        )
+      )
+    )
+    (alleKombinationen-iter 0 0 0 0 5 (list))
   )
