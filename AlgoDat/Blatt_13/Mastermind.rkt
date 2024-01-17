@@ -68,3 +68,15 @@
     )
   (filterListeIter moeglichkeiten guess score '())
   )
+
+(define (zaehleWegfallende moeglichkeiten guess score)
+  (if (empty? moeglichkeiten)
+    0
+    (if (equal? (bewerte (car moeglichkeiten) guess) score)
+      (zaehleWegfallende (cdr moeglichkeiten) guess score)
+      (+ 1 (zaehleWegfallende (cdr moeglichkeiten) guess score))
+      )
+    )
+  )
+
+(zaehleWegfallende '((0 0 0 0) (0 0 0 1) (0 0 0 2) (0 0 1 0) (0 0 0 1) (0 0 1 1) (0 1 2 1)) '(1 1 1 1) '(0 . 1))
