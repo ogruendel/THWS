@@ -9,17 +9,17 @@
     )
   )
 
-(define (zaheleFarbe code farbe)
+(define (zaehleFarbe code farbe)
   (if (empty? code)
     0
     (if (= (car code) farbe)
-      (+ 1 (zaheleFarbe (cdr code) farbe))
-      (zaheleFarbe (cdr code) farbe))
+      (+ 1 (zaehleFarbe (cdr code) farbe))
+      (zaehleFarbe (cdr code) farbe))
     )
   )
 
 (define (minFarbe code guess farbe)
-    (min (zaheleFarbe code farbe) (zaheleFarbe guess farbe))
+    (min (zaehleFarbe code farbe) (zaehleFarbe guess farbe))
   )
 
 (define (minSumme code guess)
@@ -32,5 +32,6 @@
   (minSumme-rec code guess 0)
   )
 
-(minSumme '(1 2 3 4) '(4 3 3 2))
-(minSumme '(1 1 2 2) '(1 1 1 2))
+(define (bewerte code guess)
+    (cons (- (minSumme code guess) (zaehleSchwarz code guess)) (zaehleSchwarz code guess))
+  )
