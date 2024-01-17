@@ -18,7 +18,9 @@
     )
   )
 
-(zaheleFarbe '(1 2 3 4) 1)
-(zaheleFarbe '(1 1 2 2) 1)
-(zaheleFarbe '(1 2 3 4) 5)
-(zaheleFarbe '(5 2 3 5) 5)
+(define (minFarbe code guess farbe)
+    (min (zaheleFarbe code farbe) (zaheleFarbe guess farbe))
+  )
+
+(minFarbe '(1 2 3 4) '(4 3 3 2) 3)
+(minFarbe '(1 1 2 2) '(1 1 1 1) 1)
