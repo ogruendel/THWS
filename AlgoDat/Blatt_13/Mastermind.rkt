@@ -79,4 +79,15 @@
     )
   )
 
-(zaehleWegfallende '((0 0 0 0) (0 0 0 1) (0 0 0 2) (0 0 1 0) (0 0 0 1) (0 0 1 1) (0 1 2 1)) '(1 1 1 1) '(0 . 1))
+(define (minScore moeglichkeiten guess scores)
+  (define (minScoreIter moeglichkeiten guess scores minimum)
+    (if (empty? scores)
+      minimum
+      (if (or (empty? minimum) (< (zaehleWegfallende moeglichkeiten guess (car scores)) minimum))
+        (minScoreIter moeglichkeiten guess (cdr scores) (zaehleWegfallende moeglichkeiten guess (car scores)))
+        (minScoreIter moeglichkeiten guess (cdr scores) minimum)
+        )
+      )
+    )
+  (minScoreIter moeglichkeiten guess scores '())
+  )
