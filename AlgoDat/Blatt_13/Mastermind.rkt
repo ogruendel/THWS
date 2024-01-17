@@ -22,5 +22,15 @@
     (min (zaheleFarbe code farbe) (zaheleFarbe guess farbe))
   )
 
-(minFarbe '(1 2 3 4) '(4 3 3 2) 3)
-(minFarbe '(1 1 2 2) '(1 1 1 1) 1)
+(define (minSumme code guess)
+  (define (minSumme-rec code guess i)
+    (if (= 6 i)
+      0
+      (+ (minFarbe code guess i) (minSumme-rec code guess (+ i 1)))
+      )
+    )
+  (minSumme-rec code guess 0)
+  )
+
+(minSumme '(1 2 3 4) '(4 3 3 2))
+(minSumme '(1 1 2 2) '(1 1 1 2))
