@@ -55,3 +55,16 @@
     )
     (alleKombinationen-iter 0 0 0 0 5 (list))
   )
+
+(define (filterListe moeglichkeiten guess score)
+  (define (filterListeIter moeglichkeiten guess score result)
+    (if (empty? moeglichkeiten)
+      result
+      (if (equal? (bewerte (car moeglichkeiten) guess) score)
+        (filterListeIter (cdr moeglichkeiten) guess score (append result (list (car moeglichkeiten))))
+        (filterListeIter (cdr moeglichkeiten) guess score result)
+        )
+      )
+    )
+  (filterListeIter moeglichkeiten guess score '())
+  )
