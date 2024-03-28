@@ -3,7 +3,7 @@ package chapter14;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestPunkt {
+public class PunktTest {
     @Test
     public void testLowerX() {
         try {

@@ -3,7 +3,7 @@ package chapter14;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestKugelvolumen {
+public class KugelvolumenTest {
     @Test
     public void testZero() {
         assertEquals(0, Kugelvolumen.berechneKugelvolumen(0));
