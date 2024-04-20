@@ -4,3 +4,6 @@
 Programmieren I/Programmieren_1.iml
 THWS.iml
 target
+
+*.o
+*.out
