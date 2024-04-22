@@ -2,14 +2,15 @@ package chapter16.muenzautomat;
 
 public class LargestChangeCalculator implements ChangeCalculator{
     public int[] getChange(int euros, int cent) {
-        int zweiEuro = euros / 2;
-        int einEuro = euros % 2;
-        int fuenfzig = cent / 50;
-        int zwanzig = (cent % 50) / 20;
-        int zehn = ((cent % 50) % 20) / 10;
-        int fuenf = (((cent % 50) % 20) % 10) / 5;
-        int zwei = ((((cent % 50) % 20) % 10) % 5) / 2;
-        int eins = ((((cent % 50) % 20) % 10) % 5) % 2;
+        int zweiEuro = euros / (Coin.EURO_2.value / 100);
+        int einEuro = euros % (Coin.EURO_2.value / 100);
+
+        int fuenfzig = cent / Coin.CENT_50.value;
+        int zwanzig = (cent % Coin.CENT_50.value) / Coin.CENT_20.value;
+        int zehn = ((cent % Coin.CENT_50.value) % Coin.CENT_20.value) / Coin.CENT_10.value;
+        int fuenf = (((cent % Coin.CENT_50.value) % Coin.CENT_20.value) % Coin.CENT_10.value) / Coin.CENT_5.value;
+        int zwei = ((((cent % Coin.CENT_50.value) % Coin.CENT_20.value) % Coin.CENT_10.value) % Coin.CENT_5.value) / Coin.CENT_2.value;
+        int eins = ((((cent % Coin.CENT_50.value) % Coin.CENT_20.value) % Coin.CENT_10.value) % Coin.CENT_5.value) % Coin.CENT_2.value;
 
         return new int[]{
                 eins, // alles in 1-Cent-Muenzen
