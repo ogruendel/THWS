@@ -10,7 +10,7 @@ public class StackVererbung extends ArrayList {
         super.add(e);
     }
 
-    public void pop() {
-        super.remove(super.size() - 1);
+    public Object pop() {
+        return super.remove(super.size() - 1);
     }
 }
