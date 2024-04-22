@@ -12,4 +12,19 @@ public class RoboterImpl implements Roboter, Autofahrer {
             return Entscheidung.BREMSEN;
         }
     }
+
+    @Override
+    public void aufladen() {
+
+    }
+
+    @Override
+    public void warten() {
+
+    }
+
+    @Override
+    public void arbeiten() {
+
+    }
 }

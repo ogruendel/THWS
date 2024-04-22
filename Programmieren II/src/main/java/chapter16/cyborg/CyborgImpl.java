@@ -20,4 +20,29 @@ public class CyborgImpl implements Cyborg, Mensch, Roboter, Autofahrer {
             }
         }
     }
+
+    @Override
+    public void essen() {
+
+    }
+
+    @Override
+    public void schlafen() {
+
+    }
+
+    @Override
+    public void aufladen() {
+
+    }
+
+    @Override
+    public void warten() {
+
+    }
+
+    @Override
+    public void arbeiten() {
+
+    }
 }

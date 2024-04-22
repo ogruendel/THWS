@@ -1,7 +1,6 @@
 package chapter16.cyborg;
 
 public class MenschImpl implements Mensch, Autofahrer {
-
     @Override
     public Entscheidung entscheide(Gefahrensituationen gefahrensituation) {
         int rand = (int) (Math.random() * 4);
@@ -15,5 +14,20 @@ public class MenschImpl implements Mensch, Autofahrer {
         } else {
             return Entscheidung.BREMSEN;
         }
+    }
+
+    @Override
+    public void essen() {
+
+    }
+
+    @Override
+    public void schlafen() {
+
+    }
+
+    @Override
+    public void arbeiten() {
+
     }
 }
